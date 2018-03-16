@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class PlayerTest {
 
     Player player;
@@ -15,5 +17,13 @@ public class PlayerTest {
     @Test
     public void testName() {
         assertEquals("Lionel Messi", player.getName());
+    }
+
+    @Test
+    public void testSetName(){
+        player.setName("Iniesta");
+        assertEquals("Iniesta", player.getName());
+
+
     }
 }

@@ -16,4 +16,10 @@ public class ManagerTest {
     public void testName(){
         assertEquals("Pep Guardiola", manager.getName());
     }
+
+    @Test
+    public void testSetName(){
+        manager.setName("Jose Mourinho");
+        assertEquals("Jose Mourinho", manager.getName());
+    }
 }
