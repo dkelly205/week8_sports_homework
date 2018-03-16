@@ -23,7 +23,9 @@ public class PlayerTest {
     public void testSetName(){
         player.setName("Iniesta");
         assertEquals("Iniesta", player.getName());
-
-
     }
+
+
+
+
 }

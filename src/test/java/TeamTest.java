@@ -47,8 +47,31 @@ public class TeamTest {
         team.addPlayer(player1);
         team.removePlayer(player1);
         assertEquals(0, team.getNumberOfPlayers());
-
     }
+
+    @Test
+    public void testPointsStartAt0(){
+        assertEquals(0, team.getPoints());
+    }
+
+    @Test
+    public void testPointsChangeForWin(){
+        team.play("win");
+        assertEquals(3, team.getPoints());
+    }
+
+    @Test
+    public void testPointsChangeForDraw(){
+        team.play("draw");
+        assertEquals(1, team.getPoints());
+    }
+
+    @Test
+    public void testPointsStaySameForLoss(){
+        team.play("loss");
+        assertEquals(0, team.getPoints());
+    }
+
 
 
 

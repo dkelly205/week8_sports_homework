@@ -70,4 +70,12 @@ public class Team {
     public void removePlayer(Player player) {
         players.remove(player);
     }
+
+    public void play(String result){
+        if (result == "win"){
+            points += 3;
+        } else if (result == "draw"){
+            points += 1;
+        } else points += 0;
+    }
 }
