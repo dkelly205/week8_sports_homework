@@ -5,9 +5,12 @@ public class League extends Competition {
     public League() {
     }
 
-    public League(String la_liga, GregorianCalendar gregorianCalendar, GregorianCalendar gregorianCalendar1) {
+    public League(String name, GregorianCalendar startDate, GregorianCalendar endDate) {
+        super(name, startDate, endDate);
     }
 
     public void playGame(Team team1, Team team2) {
     }
+
+
 }

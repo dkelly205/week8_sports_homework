@@ -1,4 +1,5 @@
 import java.util.GregorianCalendar;
+import java.util.HashSet;
 import java.util.Set;
 
 public abstract class Competition {
@@ -14,7 +15,7 @@ public abstract class Competition {
 
     public Competition(String name, GregorianCalendar startDate, GregorianCalendar endDate) {
         this.name = name;
-        this.teams = teams;
+        this.teams = new HashSet<Team>();
         this.startDate = startDate;
         this.endDate = endDate;
     }
@@ -61,4 +62,7 @@ public abstract class Competition {
 
     public abstract void playGame(Team team1, Team team2);
 
+    public int getNumberOfTeams() {
+        return teams.size();
+    }
 }

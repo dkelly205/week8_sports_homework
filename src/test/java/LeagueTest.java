@@ -27,8 +27,5 @@ public class LeagueTest {
         assertEquals("La Liga", league.getName());
     }
 
-    @Test
-    public void testNumberOfTeams(){
-        assertEquals(0, league.getNumberOfTeams());
-    }
+
 }
