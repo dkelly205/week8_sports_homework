@@ -18,7 +18,7 @@ public class TeamTest {
         player2 = new Player("Iniesta");
         player3 = new Player("Messi");
         manager = new Manager("Pep Guardiola");
-        team = new Team("Barcelona", manager);
+        team = new Team("Barcelona", manager, 2);
     }
 
     @Test
@@ -70,6 +70,14 @@ public class TeamTest {
     public void testPointsStaySameForLoss(){
         team.play("loss");
         assertEquals(0, team.getPoints());
+    }
+
+    @Test
+    public void testCannotAddPlayersOverSquadLimit(){
+        team.addPlayer(player1);
+        team.addPlayer(player2);
+        team.addPlayer(player3);
+        assertEquals(2, team.getNumberOfPlayers());
     }
 
 
