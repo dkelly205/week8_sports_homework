@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdd0caa8-8a4a-4062-9afc-54a13daeea8e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Employee.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/League.java" afterPath="$PROJECT_DIR$/src/main/java/League.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Manager.java" afterPath="$PROJECT_DIR$/src/main/java/Manager.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" afterPath="$PROJECT_DIR$/src/main/java/Player.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LeagueTest.java" afterPath="$PROJECT_DIR$/src/test/java/LeagueTest.java" />
-    </list>
+    <list default="true" id="cdd0caa8-8a4a-4062-9afc-54a13daeea8e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,13 +87,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
-                <element signature="e#131#132#0" expanded="true" />
+                <element signature="e#100#101#0" expanded="true" />
+                <element signature="e#127#128#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,13 +141,13 @@
             <state relative-caret-position="85">
               <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
               <folding>
-                <element signature="e#134#135#0" expanded="true" />
+                <element signature="e#130#131#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Competition.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Competition.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Competition.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="271">
@@ -492,9 +487,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_Sports_Week8_Homework - 2018.03.16 at 11h 26m 39s.xml">
-      <configuration name="All in Sports_Week8_Homework" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_Sports_Week8_Homework - 2018.03.16 at 12h 04m 08s.xml">
       <configuration name="All in Sports_Week8_Homework" configurationId="JUnit" />
     </history-entry>
@@ -520,6 +512,9 @@
       <configuration name="All in Sports_Week8_Homework" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_Sports_Week8_Homework - 2018.03.16 at 12h 17m 43s.xml">
+      <configuration name="All in Sports_Week8_Homework" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Sports_Week8_Homework - 2018.03.16 at 12h 56m 59s.xml">
       <configuration name="All in Sports_Week8_Homework" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -681,6 +676,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <folding>
+            <element signature="e#130#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#100#101#0" expanded="true" />
+            <element signature="e#127#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#144#145#0" expanded="true" />
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#202#203#0" expanded="true" />
+            <element signature="e#227#228#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Competition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -711,45 +746,6 @@
             <element signature="e#1413#1414#0" expanded="true" />
             <element signature="e#1450#1451#0" expanded="true" />
             <element signature="e#1481#1482#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#176#177#0" expanded="true" />
-            <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding>
-            <element signature="e#134#135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding>
-            <element signature="e#131#132#0" expanded="true" />
           </folding>
         </state>
       </provider>

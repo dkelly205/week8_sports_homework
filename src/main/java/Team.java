@@ -84,7 +84,7 @@ public class Team {
         players.remove(player);
     }
 
-    public void play(String result){
+    public void play(Team team){
         if (result == "win"){
             points += 3;
         } else if (result == "draw"){

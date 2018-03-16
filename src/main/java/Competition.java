@@ -2,7 +2,7 @@ import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Competition {
+public abstract class Competition implements Playable {
 
     private int id;
     private String name;
@@ -60,7 +60,6 @@ public abstract class Competition {
         this.endDate = endDate;
     }
 
-    public abstract void playGame(Team team1, Team team2);
 
     public int getNumberOfTeams() {
         return teams.size();
