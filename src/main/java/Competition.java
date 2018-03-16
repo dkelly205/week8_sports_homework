@@ -65,4 +65,8 @@ public abstract class Competition {
     public int getNumberOfTeams() {
         return teams.size();
     }
+
+    public void addTeam(Team team){
+        teams.add(team);
+    }
 }
