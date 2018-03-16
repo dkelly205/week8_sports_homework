@@ -12,7 +12,7 @@ public abstract class Competition {
     public Competition() {
     }
 
-    public Competition(String name, Set<Team> teams, GregorianCalendar startDate, GregorianCalendar endDate) {
+    public Competition(String name, GregorianCalendar startDate, GregorianCalendar endDate) {
         this.name = name;
         this.teams = teams;
         this.startDate = startDate;
@@ -58,4 +58,7 @@ public abstract class Competition {
     public void setEndDate(GregorianCalendar endDate) {
         this.endDate = endDate;
     }
+
+    public abstract void playGame(Team team1, Team team2);
+
 }
