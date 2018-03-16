@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class TeamTest {
 
@@ -39,6 +40,14 @@ public class TeamTest {
     public void testCanAddPlayerToTeam(){
         team.addPlayer(player1);
         assertEquals(1, team.getNumberOfPlayers());
+    }
+
+    @Test
+    public void testCanRemovePlayer(){
+        team.addPlayer(player1);
+        team.removePlayer(player1);
+        assertEquals(0, team.getNumberOfPlayers());
+
     }
 
 
