@@ -12,6 +12,13 @@ public abstract class Competition {
     public Competition() {
     }
 
+    public Competition(String name, Set<Team> teams, GregorianCalendar startDate, GregorianCalendar endDate) {
+        this.name = name;
+        this.teams = teams;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
     public int getId() {
         return id;
     }
