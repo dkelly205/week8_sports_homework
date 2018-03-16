@@ -1,3 +1,4 @@
+import java.util.HashSet;
 import java.util.Set;
 
 public class Team {
@@ -15,6 +16,7 @@ public class Team {
         this.name = name;
         this.manager = manager;
         this.points = 0;
+        this.players = new HashSet<Player>();
     }
 
     public int getId() {
@@ -55,5 +57,13 @@ public class Team {
 
     public void setPlayers(Set<Player> players) {
         this.players = players;
+    }
+
+    public int getNumberOfPlayers() {
+        return players.size();
+    }
+
+    public void addPlayer(Player player) {
+        players.add(player);
     }
 }

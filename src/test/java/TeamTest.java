@@ -25,5 +25,24 @@ public class TeamTest {
         assertEquals("Barcelona", team.getName());
     }
 
+    @Test
+    public void testTeamHasManager(){
+        assertEquals("Pep Guardiola", team.getManager().getName());
+    }
+
+    @Test
+    public void testTeamHasNoPlayersToStart(){
+        assertEquals(0, team.getNumberOfPlayers());
+    }
+
+    @Test
+    public void testCanAddPlayerToTeam(){
+        team.addPlayer(player1);
+        assertEquals(1, team.getNumberOfPlayers());
+    }
+
+
+
+
 
 }
