@@ -1,4 +1,6 @@
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.Random;
 import java.util.Set;
 
 public class Team {
@@ -9,6 +11,7 @@ public class Team {
     private Manager manager;
     private Set<Player> players;
     private int squadLimit;
+    private Result result;
 
     public Team() {
     }
@@ -84,11 +87,35 @@ public class Team {
         players.remove(player);
     }
 
+
+//    private Letter randomLetter() {
+//        int pick = new Random().nextInt(Letter.values().length);
+//        return Letter.values()[pick];
+//    }
+
+    public Result randomResult(){
+        int result = new Random().nextInt(Result.values().length);
+        return Result.values()[result];
+    }
+
     public void play(Team team){
-        if (result == "win"){
-            points += 3;
-        } else if (result == "draw"){
-            points += 1;
-        } else points += 0;
+        result = randomResult();
+        //if result is win points increase by 3
+        if (result == Result.WIN){
+            addPoints(Result.WIN);
+        }else if(result == Result.DRAW){
+            team.addPoints(Result.DRAW);
+            addPoints(Result.DRAW);
+        }else{
+            team.addPoints(Result.WIN);
+        }
+
+
+    }
+
+    //add points method
+
+    public void addPoints(Result result){
+        points += result.getValue();
     }
 }

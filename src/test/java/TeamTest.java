@@ -11,6 +11,7 @@ public class TeamTest {
     Player player3;
     Manager manager;
     Team team;
+    Team team2;
 
     @Before
     public void setUp() throws Exception {
@@ -19,6 +20,7 @@ public class TeamTest {
         player3 = new Player("Messi");
         manager = new Manager("Pep Guardiola");
         team = new Team("Barcelona", manager, 2);
+        team2 = new Team("Real Madrid", manager, 20);
     }
 
     @Test
@@ -55,30 +57,36 @@ public class TeamTest {
     }
 
     @Test
-    public void testPointsChangeForWin(){
-        team.play("win");
-        assertEquals(3, team.getPoints());
-    }
-
-    @Test
-    public void testPointsChangeForDraw(){
-        team.play("draw");
-        assertEquals(1, team.getPoints());
-    }
-
-    @Test
-    public void testPointsStaySameForLoss(){
-        team.play("loss");
-        assertEquals(0, team.getPoints());
-    }
-
-    @Test
     public void testCannotAddPlayersOverSquadLimit(){
         team.addPlayer(player1);
         team.addPlayer(player2);
         team.addPlayer(player3);
         assertEquals(2, team.getNumberOfPlayers());
     }
+
+    @Test
+    public void testAddPoints(){
+        team.addPoints(Result.LOSS);
+        assertEquals(0, team.getPoints());
+        team.addPoints(Result.WIN);
+        assertEquals(3, team.getPoints());
+        team.addPoints(Result.DRAW);
+        assertEquals(4, team.getPoints());
+    }
+
+//    @Test
+//    public void testRandomResult(){
+//        assertEquals(Result.WIN, team.randomResult());
+//    }
+
+//    @Test
+//    public void testPlay(){
+//        team.play(team2);
+//        assertEquals(0, team.getPoints());
+//        assertEquals(3, team2.getPoints());
+//    }
+
+
 
 
 
