@@ -1,8 +1,11 @@
 package db;
 
+import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import java.util.List;
 
 public class DBHelper {
 
@@ -34,11 +37,36 @@ public class DBHelper {
             e.printStackTrace();
         } finally {
             session.close();
+        }
     }
 
+    public static <T> T getUnique(Criteria criteria){
+        T result = null;
+        try{
+            transaction = session.beginTransaction();
+            result = (T)criteria.uniqueResult();
+            transaction.commit();
+        }catch (HibernateException e) {
+            transaction.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return result;
+    }
 
-
-
-
-
+    public static <T> List<T> getList(Criteria criteria){
+        List<T> results = null;
+        try{
+            transaction = session.beginTransaction();
+            results = criteria.list();
+            transaction.commit();
+        }catch (HibernateException e) {
+            transaction.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return results;
+    }
 }
