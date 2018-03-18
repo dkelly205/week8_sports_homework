@@ -3,9 +3,12 @@ package models;
 import models.Manager;
 import models.Player;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
+@Table(name="teams")
 public class Team {
 
     private int id;
@@ -27,6 +30,9 @@ public class Team {
 
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     public int getId() {
         return id;
     }
@@ -35,6 +41,7 @@ public class Team {
         this.id = id;
     }
 
+    @Column(name="name")
     public String getName() {
         return name;
     }
@@ -43,6 +50,7 @@ public class Team {
         this.name = name;
     }
 
+    @Column(name="points")
     public int getPoints() {
         return points;
     }
@@ -51,6 +59,7 @@ public class Team {
         this.points = points;
     }
 
+    @OneToOne
     public Manager getManager() {
         return manager;
     }
@@ -59,6 +68,7 @@ public class Team {
         this.manager = manager;
     }
 
+    @OneToMany
     public Set<Player> getPlayers() {
         return players;
     }
@@ -67,6 +77,7 @@ public class Team {
         this.players = players;
     }
 
+    @Column(name="squad_limit")
     public int getSquadLimit() {
         return squadLimit;
     }

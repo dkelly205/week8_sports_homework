@@ -1,7 +1,13 @@
 package models;
 
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
 import java.util.GregorianCalendar;
 
+@Entity
+@Table(name="leagues")
 public class League extends Competition {
 
     public League() {

@@ -2,11 +2,14 @@ package models;
 
 import behaviours.Playable;
 
+import javax.persistence.*;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Competition implements Playable {
 
     private int id;
@@ -27,6 +30,9 @@ public abstract class Competition implements Playable {
         this.result = result;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     public int getId() {
         return id;
     }
@@ -35,6 +41,7 @@ public abstract class Competition implements Playable {
         this.id = id;
     }
 
+    @Column(name="name")
     public String getName() {
         return name;
     }
@@ -51,6 +58,7 @@ public abstract class Competition implements Playable {
         this.teams = teams;
     }
 
+    @Column(name="start_date")
     public GregorianCalendar getStartDate() {
         return startDate;
     }
@@ -59,6 +67,7 @@ public abstract class Competition implements Playable {
         this.startDate = startDate;
     }
 
+    @Column(name="end_date")
     public GregorianCalendar getEndDate() {
         return endDate;
     }
