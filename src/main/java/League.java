@@ -11,7 +11,7 @@ public class League extends Competition {
     }
 
     public void playMatch(Team team1, Team team2) {
-        result = randomResult();
+        Result result = randomResult();
         if (result == Result.WIN){
             team1.addPoints(Result.WIN);
         }else if(result == Result.DRAW){
