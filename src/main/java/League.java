@@ -1,4 +1,5 @@
 import java.util.GregorianCalendar;
+import java.util.Random;
 
 public class League extends Competition {
 
@@ -9,19 +10,16 @@ public class League extends Competition {
         super(name, startDate, endDate);
     }
 
-
     public void playMatch(Team team1, Team team2) {
-        //if team 1 beats team 2, team1 gains 3 points and team2 gets nothing
-
-        //else if both teams draw then both gain 1 point
-
-        //else team 1 loses, team2 gets 3 points and team1 gets nothing
-
-//        if(team1.play(team2) == Result.WIN){
-//
-//        } else
-//
-//
-//
-     }
+        result = randomResult();
+        if (result == Result.WIN){
+            team1.addPoints(Result.WIN);
+        }else if(result == Result.DRAW){
+            team1.addPoints(Result.DRAW);
+            team2.addPoints(Result.DRAW);
+        }else{
+            team2.addPoints(Result.WIN);
+        }
+    }
 }
+

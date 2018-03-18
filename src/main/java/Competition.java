@@ -1,5 +1,6 @@
 import java.util.GregorianCalendar;
 import java.util.HashSet;
+import java.util.Random;
 import java.util.Set;
 
 public abstract class Competition implements Playable {
@@ -7,6 +8,7 @@ public abstract class Competition implements Playable {
     private int id;
     private String name;
     private Set<Team> teams;
+    private Result result;
     private GregorianCalendar startDate;
     private GregorianCalendar endDate;
 
@@ -18,6 +20,7 @@ public abstract class Competition implements Playable {
         this.teams = new HashSet<Team>();
         this.startDate = startDate;
         this.endDate = endDate;
+        this.result = result;
     }
 
     public int getId() {
@@ -60,6 +63,13 @@ public abstract class Competition implements Playable {
         this.endDate = endDate;
     }
 
+    public Result getResult() {
+        return result;
+    }
+
+    public void setResult(Result result) {
+        this.result = result;
+    }
 
     public int getNumberOfTeams() {
         return teams.size();
@@ -67,5 +77,10 @@ public abstract class Competition implements Playable {
 
     public void addTeam(Team team){
         teams.add(team);
+    }
+
+    public Result randomResult(){
+        int result = new Random().nextInt(Result.values().length);
+        return Result.values()[result];
     }
 }
