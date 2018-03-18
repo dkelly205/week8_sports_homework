@@ -1,3 +1,7 @@
+package models;
+
+import behaviours.Playable;
+
 import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.Random;
@@ -7,7 +11,7 @@ public abstract class Competition implements Playable {
 
     private int id;
     private String name;
-    private Set<Team> teams;
+    private Set<models.Team> teams;
     private Result result;
     private GregorianCalendar startDate;
     private GregorianCalendar endDate;
@@ -17,7 +21,7 @@ public abstract class Competition implements Playable {
 
     public Competition(String name, GregorianCalendar startDate, GregorianCalendar endDate) {
         this.name = name;
-        this.teams = new HashSet<Team>();
+        this.teams = new HashSet<models.Team>();
         this.startDate = startDate;
         this.endDate = endDate;
         this.result = result;
@@ -39,11 +43,11 @@ public abstract class Competition implements Playable {
         this.name = name;
     }
 
-    public Set<Team> getTeams() {
+    public Set<models.Team> getTeams() {
         return teams;
     }
 
-    public void setTeams(Set<Team> teams) {
+    public void setTeams(Set<models.Team> teams) {
         this.teams = teams;
     }
 
@@ -75,7 +79,7 @@ public abstract class Competition implements Playable {
         return teams.size();
     }
 
-    public void addTeam(Team team){
+    public void addTeam(models.Team team){
         teams.add(team);
     }
 

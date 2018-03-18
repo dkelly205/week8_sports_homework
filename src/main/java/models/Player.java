@@ -1,3 +1,7 @@
+package models;
+
+import models.Employee;
+
 public class Player extends Employee {
 
     public Player() {

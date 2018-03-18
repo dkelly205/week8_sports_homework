@@ -1,6 +1,9 @@
-import java.util.Collections;
+package models;
+
+import models.Manager;
+import models.Player;
+
 import java.util.HashSet;
-import java.util.Random;
 import java.util.Set;
 
 public class Team {

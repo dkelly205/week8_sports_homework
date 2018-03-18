@@ -1,8 +1,8 @@
-import java.util.GregorianCalendar;
-import java.util.HashSet;
-import java.util.Set;
+package models;
 
-public class Cup extends Competition{
+import java.util.GregorianCalendar;
+
+public class Cup extends Competition {
 
     private Result result;
 
@@ -11,7 +11,7 @@ public class Cup extends Competition{
 
     }
 
-    public void playMatch(Team team1, Team team2) {
+    public void playMatch(models.Team team1, models.Team team2) {
         result = randomResult();
 
         if (result == Result.WIN){

@@ -1,5 +1,6 @@
+package models;
+
 import java.util.GregorianCalendar;
-import java.util.Random;
 
 public class League extends Competition {
 
@@ -10,7 +11,7 @@ public class League extends Competition {
         super(name, startDate, endDate);
     }
 
-    public void playMatch(Team team1, Team team2) {
+    public void playMatch(models.Team team1, models.Team team2) {
         Result result = randomResult();
         if (result == Result.WIN){
             team1.addPoints(Result.WIN);

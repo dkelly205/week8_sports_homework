@@ -1,7 +1,9 @@
+import models.Cup;
+import models.Manager;
+import models.Team;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 import static org.junit.Assert.assertEquals;
