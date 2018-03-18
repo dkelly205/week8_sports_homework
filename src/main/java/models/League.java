@@ -22,5 +22,7 @@ public class League extends Competition {
             team2.addPoints(Result.WIN);
         }
     }
+
+
 }
 
