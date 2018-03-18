@@ -13,7 +13,10 @@
         <property name="show_sql">true</property>
         <mapping class="models.Employee"/>
         <mapping class = "models.Player"/>
-        <mapping class = "models.Team"/>
         <mapping class = "models.Manager"/>
+        <mapping class = "models.Team"/>
+        <mapping class = "models.Competition"/>
+        <mapping class = "models.Cup"/>
+        <mapping class = "models.League"/>
     </session-factory>
 </hibernate-configuration>

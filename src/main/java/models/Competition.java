@@ -47,7 +47,7 @@ public abstract class Competition implements Playable {
         return teams;
     }
 
-    public void setTeams(Set<models.Team> teams) {
+    public void setTeams(Set<Team> teams) {
         this.teams = teams;
     }
 
@@ -79,7 +79,7 @@ public abstract class Competition implements Playable {
         return teams.size();
     }
 
-    public void addTeam(models.Team team){
+    public void addTeam(Team team){
         teams.add(team);
     }
 

@@ -11,7 +11,7 @@ public class Cup extends Competition {
 
     }
 
-    public void playMatch(models.Team team1, models.Team team2) {
+    public void playMatch(Team team1, Team team2) {
         result = randomResult();
 
         if (result == Result.WIN){
