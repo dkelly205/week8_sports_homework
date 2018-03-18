@@ -74,17 +74,6 @@ public class TeamTest {
         assertEquals(4, team.getPoints());
     }
 
-//    @Test
-//    public void testRandomResult(){
-//        assertEquals(Result.WIN, team.randomResult());
-//    }
-
-//    @Test
-//    public void testPlay(){
-//        team.play(team2);
-//        assertEquals(0, team.getPoints());
-//        assertEquals(3, team2.getPoints());
-//    }
 
 
 

@@ -39,6 +39,29 @@ public class LeagueTest {
         assertEquals(2, league.getNumberOfTeams());
     }
 
+    @Test
+    public void testStartDate() {
+        assertEquals(new GregorianCalendar(2018, 3, 15), league.getStartDate());
+    }
+
+    @Test
+    public void testEndDate() {
+        assertEquals(new GregorianCalendar(2018, 7, 15), league.getEndDate());
+    }
+
+
+//    @Test
+//    public void testRandomResult(){
+//        assertEquals(Result.WIN, league.randomResult());
+//    }
+
+//    @Test
+//    public void testPlay(){
+//        league.playMatch(team1, team2);
+//        assertEquals(0, team1.getPoints());
+//        assertEquals(3, team2.getPoints());
+//    }
+
 
 
 
