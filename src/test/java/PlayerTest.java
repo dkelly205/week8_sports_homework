@@ -17,8 +17,6 @@ public class PlayerTest {
         manager = new Manager("Pep");
         team = new Team("Barcelona", manager, 24);
         player = new Player("Lionel Messi", team);
-
-
     }
 
     @Test
