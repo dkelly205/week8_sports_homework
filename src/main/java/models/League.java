@@ -29,6 +29,9 @@ public class League extends Competition {
         }
     }
 
+    //tip - logic, db should be league table.  Have an order method in DB helper to order by points etc
+    //could remove competition and cup classes
+    //have league, manager, player, team class then game class to make it work
 
 
 
