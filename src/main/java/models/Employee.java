@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public  abstract class Employee {
+public abstract class Employee {
     private int id;
     private String name;
 
@@ -34,4 +34,8 @@ public  abstract class Employee {
     public void setName(String name) {
         this.name = name;
     }
+
+
+
+
 }

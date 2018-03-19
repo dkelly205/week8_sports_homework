@@ -15,7 +15,6 @@ public abstract class Competition implements Playable {
     private int id;
     private String name;
     private Set<models.Team> teams;
-    private Result result;
     private GregorianCalendar startDate;
     private GregorianCalendar endDate;
 
@@ -27,7 +26,8 @@ public abstract class Competition implements Playable {
         this.teams = new HashSet<models.Team>();
         this.startDate = startDate;
         this.endDate = endDate;
-        this.result = result;
+        this.teams = new HashSet<Team>();
+
     }
 
     @Id
@@ -50,7 +50,11 @@ public abstract class Competition implements Playable {
         this.name = name;
     }
 
-    public Set<models.Team> getTeams() {
+    @ManyToMany
+    @JoinTable(name = "competition_team",
+            joinColumns = {@JoinColumn(name = "competition_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "team_id", nullable = false, updatable = false)})
+    public Set<Team> getTeams() {
         return teams;
     }
 
@@ -76,15 +80,7 @@ public abstract class Competition implements Playable {
         this.endDate = endDate;
     }
 
-    public Result getResult() {
-        return result;
-    }
-
-    public void setResult(Result result) {
-        this.result = result;
-    }
-
-    public int getNumberOfTeams() {
+    public int numberOfTeams() {
         return teams.size();
     }
 

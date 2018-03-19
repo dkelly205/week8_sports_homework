@@ -17,6 +17,7 @@ public class Team {
     private Manager manager;
     private Set<Player> players;
     private int squadLimit;
+    private Set<Competition> competitions;
 
     public Team() {
     }
@@ -27,7 +28,7 @@ public class Team {
         this.points = 0;
         this.players = new HashSet<Player>();
         this.squadLimit = squadLimit;
-
+        this.competitions = new HashSet<Competition>();
     }
 
     @Id
@@ -59,7 +60,7 @@ public class Team {
         this.points = points;
     }
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     public Manager getManager() {
         return manager;
     }
@@ -68,7 +69,7 @@ public class Team {
         this.manager = manager;
     }
 
-    @OneToMany
+    @OneToMany(mappedBy = "team", fetch = FetchType.EAGER)
     public Set<Player> getPlayers() {
         return players;
     }
@@ -86,12 +87,21 @@ public class Team {
         this.squadLimit = squadLimit;
     }
 
-    public int getNumberOfPlayers() {
+    @ManyToMany(mappedBy = "teams", fetch = FetchType.EAGER)
+    public Set<Competition> getCompetitions() {
+        return competitions;
+    }
+
+    public void setCompetitions(Set<Competition> competitions) {
+        this.competitions = competitions;
+    }
+
+    public int numberOfPlayers() {
         return players.size();
     }
 
     public void addPlayer(Player player) {
-        if(getNumberOfPlayers() < squadLimit) {
+        if(numberOfPlayers() < squadLimit) {
             players.add(player);
         }
     }
@@ -103,4 +113,5 @@ public class Team {
     public void addPoints(Result result){
         points += result.getValue();
     }
+
 }

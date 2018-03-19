@@ -47,13 +47,13 @@ public class CupTest {
 
     @Test
     public void testCupStartsEmpty(){
-        assertEquals(0, cup.getNumberOfTeams());
+        assertEquals(0, cup.numberOfTeams());
     }
 
     @Test
     public void testCanAddTeam(){
         cup.addTeam(team1);
-        assertEquals(1, cup.getNumberOfTeams());
+        assertEquals(1, cup.numberOfTeams());
     }
 
     @Test
@@ -62,10 +62,10 @@ public class CupTest {
         cup.addTeam(team2);
         cup.addTeam(team3);
         cup.addTeam(team4);
-        assertEquals(4, cup.getNumberOfTeams());
+        assertEquals(4, cup.numberOfTeams());
         cup.playMatch(team1, team2);
         cup.playMatch(team3, team4);
-        assertEquals(2, cup.getNumberOfTeams());
+        assertEquals(2, cup.numberOfTeams());
     }
 
 

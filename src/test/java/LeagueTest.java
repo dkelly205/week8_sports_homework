@@ -32,14 +32,14 @@ public class LeagueTest {
 
     @Test
     public void testNumberOfTeams(){
-        assertEquals(0, league.getNumberOfTeams());
+        assertEquals(0, league.numberOfTeams());
     }
 
     @Test
     public void testCanAddTeamToLeague(){
         league.addTeam(team1);
         league.addTeam(team2);
-        assertEquals(2, league.getNumberOfTeams());
+        assertEquals(2, league.numberOfTeams());
     }
 
     @Test

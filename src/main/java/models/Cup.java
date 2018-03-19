@@ -10,7 +10,6 @@ import java.util.GregorianCalendar;
 @Table(name="cups")
 public class Cup extends Competition {
 
-    private Result result;
 
     public Cup(String name, GregorianCalendar startDate, GregorianCalendar endDate) {
         super(name, startDate, endDate);
@@ -18,12 +17,15 @@ public class Cup extends Competition {
     }
 
     public void playMatch(Team team1, Team team2) {
-        result = randomResult();
+        Result result = randomResult();
 
         if (result == Result.WIN){
             getTeams().remove(team2);
         }else
             getTeams().remove(team1);
     }
+
+
+
 
 }

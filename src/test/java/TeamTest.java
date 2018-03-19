@@ -19,12 +19,13 @@ public class TeamTest {
 
     @Before
     public void setUp() throws Exception {
-        player1 = new Player("Xavi");
-        player2 = new Player("Iniesta");
-        player3 = new Player("Messi");
         manager = new Manager("Pep Guardiola");
         team = new Team("Barcelona", manager, 2);
         team2 = new Team("Real Madrid", manager, 20);
+        player1 = new Player("Xavi", team);
+        player2 = new Player("Iniesta", team);
+        player3 = new Player("Messi", team);
+
     }
 
     @Test
@@ -39,20 +40,20 @@ public class TeamTest {
 
     @Test
     public void testTeamHasNoPlayersToStart(){
-        assertEquals(0, team.getNumberOfPlayers());
+        assertEquals(0, team.numberOfPlayers());
     }
 
     @Test
     public void testCanAddPlayerToTeam(){
         team.addPlayer(player1);
-        assertEquals(1, team.getNumberOfPlayers());
+        assertEquals(1, team.numberOfPlayers());
     }
 
     @Test
     public void testCanRemovePlayer(){
         team.addPlayer(player1);
         team.removePlayer(player1);
-        assertEquals(0, team.getNumberOfPlayers());
+        assertEquals(0, team.numberOfPlayers());
     }
 
     @Test
@@ -65,7 +66,7 @@ public class TeamTest {
         team.addPlayer(player1);
         team.addPlayer(player2);
         team.addPlayer(player3);
-        assertEquals(2, team.getNumberOfPlayers());
+        assertEquals(2, team.numberOfPlayers());
     }
 
     @Test

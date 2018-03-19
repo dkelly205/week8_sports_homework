@@ -1,4 +1,6 @@
+import models.Manager;
 import models.Player;
+import models.Team;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,10 +9,14 @@ import static org.junit.Assert.assertEquals;
 public class PlayerTest {
 
     Player player;
+    Team team;
+    Manager manager;
 
     @Before
     public void setUp() throws Exception {
-        player = new Player("Lionel Messi");
+        manager = new Manager("Pep");
+        team = new Team("Barcelona", manager, 24);
+        player = new Player("Lionel Messi", team);
 
 
     }
