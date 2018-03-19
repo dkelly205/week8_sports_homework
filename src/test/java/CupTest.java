@@ -1,3 +1,4 @@
+import db.DBHelper;
 import models.Cup;
 import models.Manager;
 import models.Team;
@@ -23,6 +24,8 @@ public class CupTest {
     @Before
     public void setUp() throws Exception {
         cup = new Cup("Copa Del Rey", new GregorianCalendar(2018, 3, 15), new GregorianCalendar(2018, 7, 15));
+        DBHelper.saveOrUpdate(cup);
+
         team1 = new Team("Barcelona", manager, 24);
         team2 = new Team("Real Madrid", manager, 24);
         team3 = new Team("Real Betis", manager, 24);
@@ -67,6 +70,5 @@ public class CupTest {
         cup.playMatch(team3, team4);
         assertEquals(2, cup.numberOfTeams());
     }
-
 
 }

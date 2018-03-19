@@ -10,6 +10,8 @@ import java.util.GregorianCalendar;
 @Table(name="cups")
 public class Cup extends Competition {
 
+    public Cup() {
+    }
 
     public Cup(String name, GregorianCalendar startDate, GregorianCalendar endDate) {
         super(name, startDate, endDate);

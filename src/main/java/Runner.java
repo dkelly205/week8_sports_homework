@@ -45,5 +45,7 @@ public class Runner {
         List<Manager> foundManagers = DBHelper.getAll(Manager.class);
         List<Team> foundTeams = DBHelper.getAll(Team.class);
 
+
+
     }
 }

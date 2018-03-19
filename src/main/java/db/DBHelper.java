@@ -2,8 +2,7 @@ package db;
 
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import org.hibernate.*;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
@@ -13,13 +12,13 @@ public class DBHelper {
     private static Transaction transaction;
     private static Session session;
 
-    public static void saveOrUpdate(Object object){
+    public static void saveOrUpdate(Object object) {
         session = HibernateUtil.getSessionFactory().openSession();
-        try{
+        try {
             transaction = session.beginTransaction();
             session.saveOrUpdate(object);
             transaction.commit();
-        }catch (HibernateException e) {
+        } catch (HibernateException e) {
             transaction.rollback();
             e.printStackTrace();
         } finally {
@@ -27,13 +26,13 @@ public class DBHelper {
         }
     }
 
-    public static void delete(Object object){
+    public static void delete(Object object) {
         session = HibernateUtil.getSessionFactory().openSession();
-        try{
+        try {
             transaction = session.beginTransaction();
             session.delete(object);
             transaction.commit();
-        }catch (HibernateException e) {
+        } catch (HibernateException e) {
             transaction.rollback();
             e.printStackTrace();
         } finally {
@@ -41,13 +40,13 @@ public class DBHelper {
         }
     }
 
-    public static <T> T getUnique(Criteria criteria){
+    public static <T> T getUnique(Criteria criteria) {
         T result = null;
-        try{
+        try {
             transaction = session.beginTransaction();
-            result = (T)criteria.uniqueResult();
+            result = (T) criteria.uniqueResult();
             transaction.commit();
-        }catch (HibernateException e) {
+        } catch (HibernateException e) {
             transaction.rollback();
             e.printStackTrace();
         } finally {
@@ -56,13 +55,13 @@ public class DBHelper {
         return result;
     }
 
-    public static <T> List<T> getList(Criteria criteria){
+    public static <T> List<T> getList(Criteria criteria) {
         List<T> results = null;
-        try{
+        try {
             transaction = session.beginTransaction();
             results = criteria.list();
             transaction.commit();
-        }catch (HibernateException e) {
+        } catch (HibernateException e) {
             transaction.rollback();
             e.printStackTrace();
         } finally {
@@ -71,7 +70,7 @@ public class DBHelper {
         return results;
     }
 
-    public static <T> T find(Class classType, int id){
+    public static <T> T find(Class classType, int id) {
         session = HibernateUtil.getSessionFactory().openSession();
         T result = null;
         Criteria cr = session.createCriteria(classType);
@@ -80,7 +79,7 @@ public class DBHelper {
         return result;
     }
 
-    public static <T> List<T> getAll(Class classType){
+    public static <T> List<T> getAll(Class classType) {
         session = HibernateUtil.getSessionFactory().openSession();
         List<T> results = null;
         Criteria cr = session.createCriteria(classType);
@@ -88,4 +87,5 @@ public class DBHelper {
         results = getList(cr);
         return results;
     }
+
 }
